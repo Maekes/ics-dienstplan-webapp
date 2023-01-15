@@ -64,7 +64,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 
         const { error, value } = createEvents(events);
 
-        writeFileSync(`${__dirname}/../../../static/dienstplan.ics`, value as string);
+        writeFileSync(`${__dirname}/../../../static/dp/dienstplan.ics`, value as string);
 
         if (error) {
             res.status(200).json({ text: error.message });
