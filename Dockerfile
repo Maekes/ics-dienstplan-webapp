@@ -50,7 +50,7 @@ COPY --from=builder  /app/.next/static ./.next/static
 
 RUN mkdir -p ./next/static/dp
 
-USER nextjs
+#USER nextjs
 
 EXPOSE 3000
 
